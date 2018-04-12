@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+<form action="/addmethod" method="post" th:object="${theDevice}">
+    <input type="hidden" value="*{id}">
+    <label for="brand">Enter your brand </label><input type="text" th:field="*{brand}">
+    <label for="model">Enter your model </label><input type="text" th:field="*{model}">
+    <button type="submit">Add device</button>
+</form>
+
+</body>
+</html>

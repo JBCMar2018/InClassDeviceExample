@@ -6,6 +6,8 @@
 </head>
 <body>
     <h1>Devices</h1>
+    <a th:href="@{/addform}">Add a device</a>
+
     <div th:each="eachDevice:${devices}">
         <p th:text="${eachDevice.brand}"></p>
         <p th:text="${eachDevice.model}"></p>
