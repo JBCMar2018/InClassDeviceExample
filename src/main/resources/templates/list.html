@@ -7,7 +7,6 @@
 <body>
     <h1>Devices</h1>
     <div th:each="eachDevice:${devices}">
-
         <p th:text="${eachDevice.brand}"></p>
         <p th:text="${eachDevice.model}"></p>
         <p th:text="${#bools.isTrue(eachDevice.brand=='Samsung')?'Samsung!':'Something else'}"></p>

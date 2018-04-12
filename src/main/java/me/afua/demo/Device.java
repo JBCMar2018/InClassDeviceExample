@@ -1,10 +1,16 @@
 package me.afua.demo;
 
-import org.springframework.context.annotation.Bean;
-
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.io.Serializable;
 
+@Entity
 public class Device implements Serializable{
+
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Id
     private long id;
     private String model;
     private String brand;
@@ -38,12 +44,12 @@ public class Device implements Serializable{
         this.brand = brand;
     }
 
-    @Override
-    public String toString() {
-        return "Device{" +
-                "id=" + id +
-                ", model='" + model + '\'' +
-                ", brand='" + brand + '\'' +
-                '}';
-    }
+//    @Override
+//    public String toString() {
+//        return "Device{" +
+//                "id=" + id +
+//                ", model='" + model + '\'' +
+//                ", brand='" + brand + '\'' +
+//                '}';
+//    }
 }
