@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>List of Devices </title>
+</head>
+<body>
+    <h1>Devices</h1>
+    <div th:each="eachDevice:${devices}">
+
+        <p th:text="${eachDevice.brand}"></p>
+        <p th:text="${eachDevice.model}"></p>
+        <p th:text="${#bools.isTrue(eachDevice.brand=='Samsung')?'Samsung!':'Something else'}"></p>
+    </div>
+
+</body>
+</html>
